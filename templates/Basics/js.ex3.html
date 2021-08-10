@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS example</title>
+</head>
+<body>
+    <div>
+        <h1 class="heading">
+            Hello Django <button class="toggler">show</button>
+        </h1>
+        <p class="para">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates illo ea qui quaerat, nostrum labore aperiam. Laboriosam ad voluptas voluptatum nemo aperiam, perspiciatis a doloremque, necessitatibus iusto eaque cupiditate expedita laudantium blanditiis nostrum magnam in maiores animi minima rerum veritatis incidunt nam! Nobis, quia consequuntur aliquam quisquam voluptate dignissimos blanditiis nulla qui facilis a est nesciunt debitis eveniet quae numquam architecto unde dolores iusto. Itaque labore quos nesciunt fugiat fugit impedit soluta omnis assumenda harum aliquid error quia delectus suscipit blanditiis necessitatibus debitis asperiores perferendis dolorum tempore, magni maxime excepturi animi beatae amet? Maiores repellat illo deserunt cupiditate officiis possimus labore maxime laudantium ipsam animi ullam vel officia eum expedita excepturi necessitatibus libero nulla adipisci tempore quae, dolores ratione ad. Eos inventore, natus non numquam neque nisi, ex facere dignissimos quam quibusdam minus maiores totam deleniti ratione tempora et fugit officia odit obcaecati unde quas quidem perspiciatis quo? Vel possimus necessitatibus est sint eligendi, non iste doloremque in, eius totam voluptatum soluta nisi iure expedita, impedit provident temporibus deserunt consequuntur? Ratione, ex reprehenderit beatae iure quibusdam obcaecati quod fugiat iusto odit nemo a totam pariatur soluta facere. Soluta, molestias optio voluptatem excepturi dolorem culpa fugit cupiditate, quia unde numquam provident dicta assumenda sit similique ea quae minus repellat laborum at rem maiores hic repudiandae? Exercitationem omnis a saepe dolores soluta, officiis nam culpa tempore obcaecati pariatur numquam optio impedit minus voluptas totam ea tenetur amet cupiditate animi. Deleniti aliquid commodi debitis, sapiente, voluptatem voluptates quia voluptatum sit nisi vero cum.
+        </p>
+    </div>
+    <div>
+        <button class="bRed">Make background red</button>
+        <button class="bGreen">Make background green</button>
+        <button class="bYellow">Make background yellow</button>
+    </div>
+    <script>
+        document.querySelector('.para').style.display="none"
+        var content = false;
+        document.querySelector('.bRed').onclick = function(){
+            document.body.style.backgroundColor= "#ff2256"
+            document.body.style.color="#fff"
+        }
+        document.querySelector('.bGreen').onclick = function(){
+            document.body.style.backgroundColor= "#66BD63"
+            document.body.style.color="#000"
+        }
+        document.querySelector('.toggler').onclick = function(){
+            if (!content){
+                document.querySelector('.para').style.display="block"
+                document.querySelector('.toggler').innerHTML = 'hide'
+                content = true
+            }else{
+                document.querySelector('.para').style.display="none"
+                document.querySelector('.toggler').innerHTML = 'show'
+                content = false
+            }
+        }
+    </script>
+</body>
+</html>

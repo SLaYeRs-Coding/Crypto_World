@@ -1,0 +1,38 @@
+{% extends 'layout/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block css %}
+    <style>
+        #id_name{
+            background-color: rgb(240, 236, 231);
+            transition: all 200ms ease;
+        }
+        #id_name:hover, #id_name:focus{
+            transform: scale(1.03);
+            background-color: rgb(12, 16, 146);
+            color: white;
+        }
+
+    </style>
+{% endblock css %}
+    
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto mt-5">
+                <div class="card">
+                    <div class="card-body bg-dark text-light">
+                        <h1 class="card-title text-center">Contact us</h1>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{form|crispy}}
+                            <button class="btn btn-primary btn-lg btn-block">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

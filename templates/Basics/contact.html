@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body{
+            height: 300vh;
+        }
+        .box{
+            height: 10rem;
+            width: 10rem;
+            
+        }
+        
+        .red{
+            background-color: red;
+            position: fixed;
+            top:0rem;
+            right:0rem
+            
+        }
+        .pink{
+            background-color: pink;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        .pink:hover{
+            transform: scale(2) rotate(350deg);
+        }
+        
+        .close-icon{
+            font-size: 2rem; 
+            background-color: rgb(89, 123, 235);
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            position: absolute;
+            top:-1rem;
+            right:-1rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 5px #333;
+            line-height: 2rem;
+        }
+        
+        .btn-sub{
+            position: relative;
+            top:2rem;
+        }
+        .green{
+            margin: 5rem;
+            background-color: green;
+            transform: translateX(200px) scale(.5) rotate(23deg) skew(2deg);
+            transition: all 1000ms linear;
+        }
+        .green:hover{
+            transform: translateX(200px)  scale(1) rotate(360deg);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box red">
+    </div>
+    <div class="box pink">
+        <div class="close-icon">
+            &times;
+        </div>
+    </div>
+    <div>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input class="btn-sub" type="submit" value="save">
+    </div>
+    <div class="box green"></div>
+</body>
+</html>

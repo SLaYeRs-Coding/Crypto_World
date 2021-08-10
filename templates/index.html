@@ -1,0 +1,145 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+{% block css %}
+    <style>
+        .section-2{
+            background-color: rgb(176, 234, 245);
+        }
+        .text-large{
+            font-size: larger;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .gradient-bg{
+            background-image: linear-gradient(49.21deg, 
+            rgba(127, 127, 213, 0.2) 19.87%, 
+            rgba(134, 168, 231, 0.2) 58.46%,
+            rgba(145, 234, 228, 0.2) 97.05%);
+        }
+        .card-gradient{
+           
+            background-color: transparent;
+            padding: 2rem;
+            height: 300px;
+            width: 400px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        .card{
+            border: 2px rgb(5, 6, 8) solid;
+        }
+        section:nth-child(even) {
+            background-color: rgb(241, 241, 241);
+        }
+
+        section {
+            min-height: 100vh;
+        }
+
+        video {
+            padding: 10px;
+        }
+    </style>
+
+{% endblock css %}
+    
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col px-0">
+            <img src="{% static 'images/cc.jpg' %}" alt="hero image" class="img-fluid">
+        </div>
+    </div>
+    <div class="row ">
+        <div class="jumbotron jumbotron-fluid text-center my-5 ">
+            <div class="container">
+                <h1 class="display-4">Welcome to Crypto World</h1>
+                <p class="lead w-50 mx-auto" style="background-color: rgb(233, 232, 232);">The Crypto interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives. Note: This feature is available in Web Workers.</p>
+                
+                <p class="lead mt-4">
+                    <a class="btn btn-primary btn-lg" href="{% url 'currency_view' %}" role="button">Explore Crptoweb</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container section-2">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="p-5 mt-5">
+                <h1>Get started</h1>
+                <p class="text-large">
+                    A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. 
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'images/cc.jpg' %}" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card  my-2">
+                <div class="gradient-bg">
+                    <img class="card-img-top card-gradient " src="{% static 'images/ethereum.png' %}" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Ethereum</h4>
+                    <p class="card-text">Tell us about the latest stories from crypto world </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card  my-2">
+                <div class="gradient-bg">
+                    <img class="card-img-top card-gradient " src="{% static 'images/lite coin.jpg' %}" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Litecoin</h4>
+                    <p class="card-text">Check out the coolest new stories</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card  my-2">
+                <div class="gradient-bg">
+                    <img class="card-img-top card-gradient " src="{% static 'images/Dogecoin_Logo.png' %}" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Dogecoin</h4>
+                    <p class="card-text">A wallet lets you connect to Ethereum and manage your funds.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card  my-2">
+                <div class="gradient-bg">
+                    <img class="card-img-top card-gradient " src="{% static 'images/default.jpg' %}" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Bitcoin</h4>
+                    <p class="card-text">A wallet lets you connect to Ethereum and manage your funds.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <h2>Currencies</h2>
+    <video src="{% static 'video/Bitcoin.mp4' %}" width=33% poster="" controls></video>
+    <video src="{% static 'video/Cardano.mp4' %}" width=33% poster="" controls></video>
+    <video src="{% static 'video/Dogecoin.mp4' %}" width=33% poster="" controls></video>
+    <br>
+    <br>
+    <br>
+    <video src="{% static 'video/Litecoin.mp4' %}" width=33% poster="" controls></video>
+    <video src="{% static 'video/Tron.mp4' %}" width=33% poster="" controls></video>
+    <video src="{% static 'video/Ethereum.mp4' %}" width=33% poster="" controls></video>
+</section>
+{% endblock content %}

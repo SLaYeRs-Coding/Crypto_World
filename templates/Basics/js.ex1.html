@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS example</title>
+</head>
+<body>
+    <div>
+        <input type="text">
+        <button>Submit</button>
+    </div>
+    <div>
+        <h3 class="output"></h3>
+    </div>
+
+    <script>
+       var btn = document.querySelector('button')
+       var box = document.querySelector('input')
+       var out = document.querySelector('.output')
+       btn.onclick = function(){
+           value = box.value
+           alert(value)
+       };
+           
+    </script>
+</body>
+</html>

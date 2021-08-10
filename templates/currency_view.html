@@ -1,0 +1,34 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-8">
+            
+            {% for item in currencies %}
+            <div class="card mb-3" >
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="{{item.icon.url}}" class=" rounded-start" height="100px">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}</h5>
+                            <p>
+                                visit the <a href="{{item.website}}">Website <i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <h3>No currency data found</h3>
+            {% endfor %}
+            
+        </div>
+        <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam reiciendis, mollitia velit dolorum corporis minus, accusantium aperiam facere doloremque quos, nisi et sunt! Natus minima neque blanditiis laborum ipsam, pariatur repudiandae deleniti molestias aliquid mollitia? Eum quaerat eius animi saepe voluptates, quod officiis illo ipsa corrupti! Delectus rerum eaque corrupti dolorem, nam ipsa molestias quibusdam laboriosam modi odio quae facere exercitationem consectetur iure numquam corporis eius. Natus voluptatem quia architecto eveniet sequi quasi quis quibusdam explicabo animi consequuntur repellendus quae nam fugiat commodi magnam neque, esse suscipit ad! Sunt quibusdam molestiae, doloribus tenetur vel officiis adipisci quas. Quasi officiis numquam asperiores dicta qui sed sint laboriosam, ratione animi architecto ea, nisi, reprehenderit aspernatur sunt aut! Vitae accusantium perspiciatis in, doloribus expedita, dolorum nisi nesciunt unde, modi velit officiis? Dolores dignissimos vero nulla praesentium assumenda temporibus esse culpa nostrum cumque sunt ducimus consequatur facere, impedit quas perspiciatis incidunt est, sit deleniti consectetur mollitia, repudiandae fugiat eligendi libero tenetur? Molestiae est facilis reprehenderit hic atque doloribus sequi enim accusamus, unde, eaque doloremque totam earum a sint, quae ipsum voluptatibus. Cum sunt quam quidem atque mollitia eligendi perspiciatis inventore earum dolore dolorum, itaque eveniet repudiandae error provident eaque aut veniam sequi. Quaerat, deleniti.</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

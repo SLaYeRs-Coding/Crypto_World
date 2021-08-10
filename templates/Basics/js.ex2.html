@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS example</title>
+</head>
+<body>
+    <div>
+        <input type="number" class="n1"><br>
+        <input type="number" class="n2"><br>
+        <button class="btnAdd">add</button>
+        <button class="btnMul">multiply</button>
+    </div>
+    <div>
+        <h3 class="outAdd"></h3>
+        <h3 class="outMul"></h3>
+    </div>
+
+    <script>
+        var n1 = document.querySelector('.n1')
+        var n2 = document.querySelector('.n2')
+        document.querySelector('.btnAdd').onclick = function(){
+            out = parseInt(n1.value) + parseInt(n2.value)
+            document.querySelector('.outAdd').innerHTML = out
+        }    
+        document.querySelector('.btnMul').onclick = function(){
+            out = n1.value * n2.value
+            document.querySelector('.outMul').innerHTML = out
+        } 
+    
+    </script>
+</body>
+</html>
